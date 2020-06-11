@@ -2,5 +2,4 @@
 
 
 Video showing example of working code in Assets folder
-http://github.com - automatic!
-[GitHub](http://github.com)
+[Video](https://github.com/mcruzpr86/liri-bot/tree/master/assets)
