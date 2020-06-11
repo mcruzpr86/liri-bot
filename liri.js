@@ -1,11 +1,10 @@
 require("dotenv").config();
+
 var Spotify = require('node-spotify-api');
 
+var axios = require('axios')
 
 var keys = require("./key.js");
-console.log(keys)
-console.log(process.argv)
-console.log(process.argv[2])
 
 var command = process.argv[2]
 
@@ -34,13 +33,28 @@ function spotifyThis() {
         });
 }
 
+function movieThis() {
+    //movie this if statement
+    if (!userInput) {
+        userinput = 'Mr. Nobody'
+    }
+    var movieURL = 'http://www.omdbapi.com/?t=' + userInput + '&y=&plot=short&apikey=trilogy'
+    axios
+        .get(movieURL)
+        .then(function (response) {
+            let results = response.data
+            console.log(response)
+        })
+}
+
+
 
 switch (command) {
     case 'spotify-this-song':
         spotifyThis()
         break;
     case 'movie-this':
-        //code
+        movieThis()
         break;
     case 'do-what-it-says':
         //code
@@ -53,4 +67,3 @@ switch (command) {
 
 }
 
-    //var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
