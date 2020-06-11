@@ -1,4 +1,4 @@
-### liri-bot
+### Liri-bot
 
 
 Video showing example of working code in Assets folder
